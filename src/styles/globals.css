@@ -3,25 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --progress-width: 0;
+  --buffered-width: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.progress-bar::-webkit-slider-thumb {
+  z-index: 4;
+  position: relative;
+}
+
+.progress-bar::before {
+  transform: scaleX(var(--progress-width));
+  z-index: 3;
+}
+
+.progress-bar::after {
+  transform: scaleX(var(--buffered-width));
+  transform-origin: left;
+  z-index: 2;
+}
+
+@layer utilities {
+  .font-width-75 {
+    font-stretch: 75%;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .font-width-95 {
+    font-stretch: 95%;
+  }
+  .font-width-105 {
+    font-stretch: 105%;
+  }
+  .font-width-115 {
+    font-stretch: 115%;
+  }
 }
