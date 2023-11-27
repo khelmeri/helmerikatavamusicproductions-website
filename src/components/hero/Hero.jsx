@@ -20,7 +20,7 @@ export default function Hero() {
         alt="hero"
       />
       <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black/60 to-transparent" />
-      <div className="absolute inset-0 bg-[url(https://grainy-gradients.vercel.app/noise.svg)] opacity-20 brightness-100 contrast-150" />
+      <div className="absolute inset-0 bg-[url(https://grainy-gradients.vercel.app/noise.svg)] opacity-20 brightness-75 contrast-150" />
     </div>
   );
 }

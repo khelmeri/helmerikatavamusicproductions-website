@@ -15,10 +15,10 @@ export default function () {
 
       <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black to-transparent sm:from-20%" />
       <div className="z-20 flex items-center justify-center">
-        <h1 className="font-mona-expanded absolute top-16 text-5xl font-black uppercase text-white sm:top-20">
-          Contact Me
+        <h1 className="absolute top-16 font-mona-expanded text-5xl font-black uppercase text-white sm:top-20">
+          Contact
         </h1>
-        <div className="font-mona-expanded mx-4 flex max-w-[420px] flex-col items-center justify-center text-2xl text-white sm:text-3xl">
+        <div className="mx-4 flex max-w-[420px] flex-col items-center justify-center font-mona-expanded text-2xl text-white sm:text-3xl">
           <p className="">Formi ja linkit/somet tulleepi sitte tähä</p>
         </div>
       </div>
