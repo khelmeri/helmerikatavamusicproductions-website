@@ -106,7 +106,7 @@ export default function AudioPlayer({
   };
 
   return (
-    <div className="font-mona-expanded relative rounded-t-xl bg-black/90 p-3 text-slate-400">
+    <div className="relative rounded-t-xl bg-black/90 p-3 font-mona-expanded text-slate-400">
       {currentSong && (
         <audio
           ref={audioRef}
@@ -138,8 +138,8 @@ export default function AudioPlayer({
           <p className="text-sm">Artisti</p>
         </div>
       </div>
-      <div className="mt-4 grid grid-cols-3 items-center">
-        <span className="text-xs">
+      <div className="mt-4 grid items-center sm:grid-cols-3">
+        <span className="hidden text-xs sm:block">
           {elapsedDisplay} / {durationDisplay}
         </span>
         <div className="flex items-center gap-4 justify-self-center">
@@ -155,14 +155,14 @@ export default function AudioPlayer({
             disabled={!isReady}
             onClick={togglePlayPause}
             aria-label={isPlaying ? "Pause" : "Play"}
-            size="lg"
+            size="xl"
           >
             {!isReady && currentSong ? (
               <CgSpinner size={24} className="animate-spin" />
             ) : isPlaying ? (
-              <MdPause size={30} />
+              <MdPause size={34} className="text-black" />
             ) : (
-              <MdPlayArrow size={30} />
+              <MdPlayArrow size={34} />
             )}
           </IconButton>
           <IconButton
@@ -174,7 +174,6 @@ export default function AudioPlayer({
             <MdSkipNext size={24} />
           </IconButton>
         </div>
-
         <div className="hidden items-center gap-3 justify-self-end sm:flex">
           <IconButton
             intent="secondary"
@@ -191,7 +190,9 @@ export default function AudioPlayer({
           <VolumeInput volume={volume} onVolumeChange={handleVolumeChange} />
         </div>
       </div>
-
+      <span className="text-xs sm:hidden">
+        {elapsedDisplay} / {durationDisplay}
+      </span>
       <AudioProgressBar
         duration={duration}
         currentProgress={currrentProgress}

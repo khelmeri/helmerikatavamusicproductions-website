@@ -82,9 +82,7 @@ export default function App({
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1"
         />
-        <title key="title">
-          Heavy Service Music - Mixing & Mastering Services
-        </title>
+        <title key="title">Heavy Service Music - Mixing Services</title>
         <meta
           key="og:title"
           property="og:title"
@@ -114,12 +112,12 @@ export default function App({
         <meta
           key="og:description"
           property="og:description"
-          content="Professional mixing and mastering services. For your heavier music."
+          content="Professional mixing services. For your heavier music."
         />
         <meta
           key="og:site_name"
           property="og:site_name"
-          content="Heavy Service Music - Professional Mixing and Mastering Services"
+          content="Heavy Service Music - Professional Mixing Services"
         />
         <meta
           key="twitter:image:alt"
