@@ -25,7 +25,7 @@ export default function Hero() {
 
       <Link
         href="#portfolio"
-        className="absolute bottom-5 right-5 z-10 flex items-center justify-center rounded-full bg-neutral-700 p-3 text-white duration-200 hover:bg-amber-700 hover:text-black sm:bottom-10 sm:right-10"
+        className="absolute bottom-14 right-5 z-10 flex items-center justify-center rounded-full bg-neutral-700 p-3 text-white duration-200 hover:bg-amber-700 hover:text-black sm:bottom-10 sm:right-10"
       >
         <FaChevronDown size={30} />
       </Link>
