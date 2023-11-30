@@ -27,6 +27,7 @@ export default function AudioPlayer({
   songIndex,
   onNext,
   onPrev,
+  initPlay,
 }) {
   const audioRef = React.useRef(null);
 
@@ -61,6 +62,9 @@ export default function AudioPlayer({
   };
 
   const togglePlayPause = () => {
+    if (typeof currentSong === "undefined") {
+      initPlay();
+    }
     if (isPlaying) {
       audioRef.current?.pause();
       setIsPlaying(false);
@@ -106,7 +110,7 @@ export default function AudioPlayer({
   };
 
   return (
-    <div className="relative rounded-t-xl bg-black/90 p-3 font-mona-expanded text-slate-400">
+    <div className="relative rounded-t-xl bg-black/50 p-3 font-mona-expanded text-slate-400">
       {currentSong && (
         <audio
           ref={audioRef}
@@ -132,10 +136,10 @@ export default function AudioPlayer({
 
       <div className="flex flex-col items-center justify-center">
         <div className="mb-1 text-center">
-          <p className="font-bold text-slate-300">
-            {currentSong?.title ?? "Select a song"}
+          <p className="font-semibold text-slate-300">
+            {currentSong?.title ?? "Press play"}
           </p>
-          <p className="text-sm">Artisti</p>
+          <p className="text-sm">{currentSong?.title && "Artisti"}</p>
         </div>
       </div>
       <div className="mt-4 grid items-center sm:grid-cols-3">
@@ -152,7 +156,6 @@ export default function AudioPlayer({
             <MdSkipPrevious size={24} />
           </IconButton>
           <IconButton
-            disabled={!isReady}
             onClick={togglePlayPause}
             aria-label={isPlaying ? "Pause" : "Play"}
             size="xl"
@@ -162,7 +165,7 @@ export default function AudioPlayer({
             ) : isPlaying ? (
               <MdPause size={34} className="text-black" />
             ) : (
-              <MdPlayArrow size={34} />
+              <MdPlayArrow size={34} className="animate-pulse" />
             )}
           </IconButton>
           <IconButton

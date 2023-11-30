@@ -6,15 +6,19 @@ import { Songs } from "@/components/audioPlayer/Songs";
 
 export default function PlayerWrapper() {
   const [currentSongIndex, setCurrentSongIndex] = useState(-1);
+  const initPlay = () => {
+    setCurrentSongIndex(0);
+  };
   const currentSong = Songs[currentSongIndex];
   return (
-    <div className="mx-2 flex h-full flex-col rounded-xl bg-black/70 text-slate-300">
+    <div className="mx-2 flex h-full flex-col rounded-xl bg-black/50 text-slate-300">
       <div className="mt-auto">
         <AudioPlayer
           key={currentSongIndex}
           currentSong={currentSong}
           songCount={Songs.length}
           songIndex={currentSongIndex}
+          initPlay={initPlay}
           onNext={() => setCurrentSongIndex((i) => i + 1)}
           onPrev={() => setCurrentSongIndex((i) => i - 1)}
         />
@@ -28,7 +32,7 @@ export default function PlayerWrapper() {
                 className={`flex w-full items-center justify-between  rounded px-3 py-4 ${
                   currentSongIndex === index
                     ? "bg-black text-white"
-                    : " duration-200 hover:bg-black/90 hover:text-white"
+                    : " duration-200 hover:bg-black/70 hover:text-white"
                 }`}
               >
                 <h2 className="font-semibold">Artisti - {song.title}</h2>

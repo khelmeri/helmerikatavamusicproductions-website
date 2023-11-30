@@ -5,12 +5,17 @@ import { FaChevronDown } from "react-icons/fa";
 export default function Hero() {
   return (
     <section
-      className="fixed top-0 z-0 flex h-screen w-screen items-center justify-center bg-black"
+      className="fixed top-0 z-0 flex h-screen w-screen items-center justify-center bg-black font-mona-expanded"
       id="home"
     >
-      <h1 className="z-10 mb-20 text-center font-mona-expanded text-6xl font-black uppercase text-white sm:text-7xl">
-        Heavy Service Music
-      </h1>
+      <div className="z-10 mb-20 flex flex-col text-center ">
+        <h1 className="text-6xl font-black uppercase text-white sm:text-7xl">
+          Heavy Service Music
+        </h1>
+        <p className="mt-5 text-sm font-[500] uppercase text-white">
+          Recording / Production / Mixing
+        </p>
+      </div>
       <Image
         src="/hero-bg.avif"
         sizes=""
@@ -25,9 +30,12 @@ export default function Hero() {
 
       <Link
         href="#portfolio"
-        className="absolute bottom-14 right-5 z-10 flex items-center justify-center rounded-full bg-neutral-700 p-3 text-white duration-200 hover:bg-amber-700 hover:text-black sm:bottom-10 sm:right-10"
+        className="absolute bottom-20 left-1/2 z-10 flex -translate-x-1/2 transform items-center justify-center gap-4 rounded-full bg-neutral-700 p-3 text-white duration-200 hover:bg-amber-700 hover:text-black sm:bottom-10"
       >
-        <FaChevronDown size={30} />
+        <p className="text-sm font-semibold text-white sm:text-lg">
+          Do you want to sound like this?
+        </p>
+        <FaChevronDown size={20} />
       </Link>
     </section>
   );
