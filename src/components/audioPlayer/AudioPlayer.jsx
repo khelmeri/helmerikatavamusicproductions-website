@@ -146,7 +146,7 @@ export default function AudioPlayer({
         <span className="hidden text-xs sm:block">
           {elapsedDisplay} / {durationDisplay}
         </span>
-        <div className="flex items-center gap-4 justify-self-center">
+        <div className="z-10 flex cursor-pointer items-center gap-4 justify-self-center">
           <IconButton
             onClick={handlePrev}
             disabled={songIndex === 0}
@@ -155,19 +155,20 @@ export default function AudioPlayer({
           >
             <MdSkipPrevious size={24} />
           </IconButton>
-          <IconButton
-            onClick={togglePlayPause}
-            aria-label={isPlaying ? "Pause" : "Play"}
-            size="xl"
-          >
-            {!isReady && currentSong ? (
-              <CgSpinner size={24} className="animate-spin" />
-            ) : isPlaying ? (
-              <MdPause size={34} className="text-black" />
-            ) : (
-              <MdPlayArrow size={34} className="animate-pulse" />
+          <div className="relative z-20" onClick={togglePlayPause}>
+            <IconButton aria-label={isPlaying ? "Pause" : "Play"} size="xl">
+              {!isReady && currentSong ? (
+                <CgSpinner size={24} className="animate-spin" />
+              ) : isPlaying ? (
+                <MdPause size={34} className="text-black" />
+              ) : (
+                <MdPlayArrow size={34} />
+              )}
+            </IconButton>
+            {!isReady && (
+              <div className="absolute left-2 top-[7px] animate-ping rounded-full bg-amber-600 p-6" />
             )}
-          </IconButton>
+          </div>
           <IconButton
             onClick={handleNext}
             disabled={songIndex === songCount - 1}
