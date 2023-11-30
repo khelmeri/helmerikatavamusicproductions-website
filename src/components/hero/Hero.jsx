@@ -27,10 +27,9 @@ export default function Hero() {
         alt="hero"
       />
       <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black/40 to-transparent" />
-
       <Link
         href="#portfolio"
-        className="absolute bottom-20 left-1/2 z-10 flex -translate-x-1/2 transform items-center justify-center gap-4 rounded-full bg-neutral-700 p-3 text-white duration-200 hover:bg-amber-700 hover:text-black sm:bottom-10"
+        className="absolute bottom-20 left-1/2 z-10 flex w-[280px] -translate-x-1/2 transform items-center justify-center gap-4 rounded-full bg-neutral-700 py-2 text-white duration-200 hover:bg-amber-700 hover:text-black sm:bottom-10 sm:w-fit sm:px-3"
       >
         <p className="text-sm font-semibold text-white sm:text-lg">
           Do you want to sound like this?

@@ -11,7 +11,7 @@ export default function PlayerWrapper() {
   };
   const currentSong = Songs[currentSongIndex];
   return (
-    <div className="mx-2 flex h-full flex-col rounded-xl bg-black/50 text-slate-300">
+    <div className="mx-2 flex h-full flex-col rounded-xl bg-black/40 text-slate-300">
       <div className="mt-auto">
         <AudioPlayer
           key={currentSongIndex}

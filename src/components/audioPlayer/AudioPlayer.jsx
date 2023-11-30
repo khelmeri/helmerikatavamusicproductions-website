@@ -110,7 +110,7 @@ export default function AudioPlayer({
   };
 
   return (
-    <div className="relative rounded-t-xl bg-black/50 p-3 font-mona-expanded text-slate-400">
+    <div className="relative rounded-t-xl bg-black/60 p-3 font-mona-expanded text-slate-400">
       {currentSong && (
         <audio
           ref={audioRef}
