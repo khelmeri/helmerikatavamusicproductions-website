@@ -19,7 +19,7 @@ export default function () {
         className="z-0 brightness-50 grayscale"
         alt="hero"
       />
-      <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black to-transparent sm:from-10%" />
+      <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black/80 from-10% to-transparent" />
       {/* <div className="absolute inset-0 bg-[url(https://grainy-gradients.vercel.app/noise.svg)] opacity-20 brightness-100 contrast-150" /> */}
       <div className="z-10 flex items-center justify-center">
         <h1 className="absolute top-16 font-mona-expanded text-5xl font-black uppercase text-white sm:top-20">

@@ -26,7 +26,7 @@ export default function Hero() {
         className="z-0 brightness-50 grayscale"
         alt="hero"
       />
-      <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black/60 to-transparent" />
+      <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black/40 to-transparent" />
 
       <Link
         href="#portfolio"

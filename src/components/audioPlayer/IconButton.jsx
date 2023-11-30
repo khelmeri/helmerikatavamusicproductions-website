@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 
 const colorMap = {
-  primary: "bg-amber-700 text-black",
+  primary: "bg-amber-600 text-black",
   secondary: "bg-black text-white",
 };
 
