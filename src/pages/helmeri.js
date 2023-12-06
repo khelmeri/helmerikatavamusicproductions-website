@@ -1,28 +1,15 @@
-import Admin from "@/components/admin/admin";
-import { useSession } from "next-auth/react";
-import { getSession } from "next-auth/react";
+import { NextStudio } from "next-sanity/studio";
+import config from "../../sanity.config";
+import Head from "next/head";
 
-function AdminDashboard() {
-  const { data: session } = useSession();
-
-  return <Admin user={session.user} />;
+export default function AdminPage() {
+  return (
+    <>
+      <Head>
+        <title key="title">Heavy Service Music Admin</title>
+        <meta name="robots" content="noindex" />
+      </Head>
+      <NextStudio config={config} />
+    </>
+  );
 }
-
-export async function getServerSideProps(context) {
-  const session = await getSession({ req: context.req });
-
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/api/auth/signin",
-        permanent: false,
-      },
-    };
-  }
-
-  return {
-    props: { session },
-  };
-}
-
-export default AdminDashboard;

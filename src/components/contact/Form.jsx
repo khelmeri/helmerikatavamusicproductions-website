@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function Form() {
+export default function Form({ contactData }) {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
@@ -31,7 +31,7 @@ export default function Form() {
     <div className="relative min-w-[300px] justify-center sm:min-w-[380px]">
       {!success && (
         <p className="text-center text-xl font-[500] text-white">
-          Leave your details below
+          {contactData.contactSubtitle}
         </p>
       )}
       {error && (

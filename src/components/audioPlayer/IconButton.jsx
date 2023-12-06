@@ -11,6 +11,7 @@ const sizeMap = {
   md: "h-10 w-10",
   lg: "h-12 w-12",
   xl: "h-16 w-16",
+  xxl: "h-20 w-20",
 };
 
 export default function IconButton({

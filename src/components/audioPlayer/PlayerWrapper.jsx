@@ -2,13 +2,18 @@ import AudioPlayer from "@/components/audioPlayer/AudioPlayer";
 import { MdPlayArrow, MdPause } from "react-icons/md";
 import { useState } from "react";
 
-import { Songs } from "@/components/audioPlayer/Songs";
-
-export default function PlayerWrapper() {
+export default function PlayerWrapper({ songs }) {
   const [currentSongIndex, setCurrentSongIndex] = useState(-1);
   const initPlay = () => {
     setCurrentSongIndex(0);
   };
+
+  const Songs = songs.map((n) => ({
+    artist: n.songArtist,
+    title: n.songTitle,
+    src: n.songUrl,
+  }));
+
   const currentSong = Songs[currentSongIndex];
   return (
     <div className="mx-2 flex h-full flex-col rounded-xl bg-black/40 text-slate-300">
@@ -29,13 +34,15 @@ export default function PlayerWrapper() {
             <li key={song.title} className="mb-1">
               <button
                 onClick={() => setCurrentSongIndex(index)}
-                className={`flex w-full items-center justify-between  rounded px-3 py-4 ${
+                className={`flex w-full items-center justify-between rounded  px-3 py-4 md:text-xl ${
                   currentSongIndex === index
                     ? "bg-black text-white"
                     : " duration-200 hover:bg-black/70 hover:text-white"
                 }`}
               >
-                <h2 className="font-semibold">Artisti - {song.title}</h2>
+                <h2 className="font-semibold">
+                  {song.artist} - {song.title}
+                </h2>
                 <span>
                   {index === currentSongIndex ? (
                     <MdPause size={20} />

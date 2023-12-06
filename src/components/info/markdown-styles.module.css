@@ -1,0 +1,29 @@
+.markdown {
+  @apply text-lg leading-relaxed;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol {
+  @apply my-3 text-2xl text-white sm:text-3xl;
+}
+
+.markdown blockquote {
+  @apply mx-6 my-10 text-sm font-semibold text-amber-700 sm:mx-20;
+}
+
+.markdown h1 {
+  @apply text-3xl font-semibold text-white sm:text-4xl;
+}
+
+.markdown h2 {
+  @apply mb-4 mt-12 text-2xl font-[500] leading-snug text-white sm:text-3xl;
+}
+
+.markdown h3 {
+  @apply mb-4 mt-8 text-xl leading-snug text-white sm:text-2xl;
+}
+
+.markdown strong {
+  @apply text-white;
+}

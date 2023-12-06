@@ -135,11 +135,11 @@ export default function AudioPlayer({
       )}
 
       <div className="flex flex-col items-center justify-center">
-        <div className="mb-1 text-center">
-          <p className="font-semibold text-slate-300">
+        <div className="my-2 text-center">
+          <p className="font-semibold text-white lg:text-2xl">
             {currentSong?.title ?? "Press play"}
           </p>
-          <p className="text-sm">{currentSong?.title && "Artisti"}</p>
+          <p>{currentSong?.artist ?? ""}</p>
         </div>
       </div>
       <div className="mt-4 grid items-center sm:grid-cols-3">
@@ -166,7 +166,7 @@ export default function AudioPlayer({
               )}
             </IconButton>
             {!isReady && (
-              <div className="absolute left-2 top-[7px] animate-ping rounded-full bg-amber-600 p-6" />
+              <div className="absolute left-2 top-[8px] animate-ping rounded-full bg-amber-600 p-6" />
             )}
           </div>
           <IconButton
