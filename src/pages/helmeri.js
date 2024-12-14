@@ -6,7 +6,7 @@ export default function AdminPage() {
   return (
     <>
       <Head>
-        <title key="title">Heavy Service Music Admin</title>
+        <title key="title">Helmeri Katava Music Productions Admin</title>
         <meta name="robots" content="noindex" />
       </Head>
       <NextStudio config={config} />

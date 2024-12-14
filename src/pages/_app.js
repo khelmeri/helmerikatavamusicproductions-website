@@ -1,4 +1,3 @@
-import { SessionProvider } from "next-auth/react";
 import Head from "next/head";
 import "@/styles/globals.css";
 import localFont from "next/font/local";
@@ -76,17 +75,19 @@ export default function App({
   pageProps: { session, ...pageProps },
 }) {
   return (
-    <SessionProvider session={session}>
+    <>
       <Head>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1"
         />
-        <title key="title">Heavy Service Music - Mixing Services</title>
+        <title key="title">
+          Helmeri Katava Music Productions - Mixing Services
+        </title>
         <meta
           key="og:title"
           property="og:title"
-          content="Heavy Service Music"
+          content="Helmeri Katava Music Productions"
         />
         <meta key="og:type" property="og:type" content="website" />
         <meta
@@ -94,11 +95,6 @@ export default function App({
           property="og:image:type"
           content="image/jpg"
         />
-        {/* <meta
-          key="og:image"
-          property="og:image"
-          content={process.env.NEXT_PUBLIC_BASE_URL + "/LogoWithBackground.jpg"}
-        /> */}
         <meta
           key="og:url"
           property="og:url"
@@ -117,12 +113,12 @@ export default function App({
         <meta
           key="og:site_name"
           property="og:site_name"
-          content="Heavy Service Music - Professional Mixing Services"
+          content="Helmeri Katava Music Productions - Professional Mixing Services"
         />
         <meta
           key="twitter:image:alt"
           name="twitter:image:alt"
-          content="Heavy Service Music Logo"
+          content="Helmeri Katava Music Productions Logo"
         />
       </Head>
       <main
@@ -130,6 +126,6 @@ export default function App({
       >
         <Component {...pageProps} />
       </main>
-    </SessionProvider>
+    </>
   );
 }

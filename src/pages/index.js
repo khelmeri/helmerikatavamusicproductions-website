@@ -13,8 +13,7 @@ export default function Home({
 }) {
   return (
     <div className="relative">
-      <Hero heroData={heroData} />
-      <Portfolio portfolioData={portfolioData} songs={songs} />
+      <Hero heroData={heroData} portfolioData={portfolioData} songs={songs} />
       <Info infoData={infoData} />
       <Contact contactData={contactData} />
     </div>

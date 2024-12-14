@@ -3,8 +3,8 @@ import Form from "./Form";
 export default function ({ contactData }) {
   return (
     <section
-      className="sticky top-0 z-30 flex h-screen w-screen items-center justify-center bg-gray-950"
-      id="contact"
+      className="sticky top-0 z-20 flex h-screen w-screen items-center justify-center bg-black"
+      id="info"
     >
       <Image
         src={contactData[0].contactBgUrl}

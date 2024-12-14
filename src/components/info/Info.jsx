@@ -36,8 +36,8 @@ const ptComponents = {
 export default function ({ infoData }) {
   return (
     <section
-      className="sticky top-0 z-20 flex h-screen w-screen items-center justify-center bg-black"
-      id="info"
+      className="sticky top-0 z-10 mt-[100vh] flex h-screen w-screen items-center justify-center bg-black"
+      id="portfolio"
     >
       <Image
         src={infoData[0].infoBgUrl}
@@ -53,24 +53,41 @@ export default function ({ infoData }) {
       <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black to-transparent sm:from-20%" />
       {/* <div className="absolute inset-0 bg-[url(https://grainy-gradients.vercel.app/noise.svg)] opacity-20 brightness-100 contrast-150" /> */}
       <div className="z-20 flex items-center justify-center">
-        <h1 className="absolute top-16 font-mona-expanded text-5xl font-black uppercase text-white sm:top-20 2xl:text-7xl">
+        <h1 className="absolute top-16 font-mona-expanded text-2xl font-black uppercase text-white sm:top-20 sm:text-5xl 2xl:text-7xl">
           Info
         </h1>
-        <div
-          className={`mx-4 flex max-w-[420px] flex-col items-center justify-center font-mona-expanded ${markdownStyles.markdown}`}
-        >
-          <PortableText
-            value={infoData[0].infoContent}
-            components={ptComponents}
-          />
+        <div className="mt-12 grid gap-x-12 sm:mt-16 sm:grid-cols-2">
+          <div
+            className={`mx-4 mt-2 flex max-w-[420px] flex-col font-mona-expanded  sm:mt-12 ${markdownStyles.markdown}`}
+          >
+            <PortableText
+              value={infoData[0].infoContent}
+              components={ptComponents}
+            />
+          </div>
+          <div>
+            <div className="flex justify-center">
+              <Image
+                src="/helmeri-katava-music-productions.jpg"
+                alt="Description of image"
+                width={300}
+                height={300}
+                className="pointer-events-none w-1/2 rounded-lg shadow-md brightness-50 grayscale sm:w-5/6"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
       <Link
-        href="#contact"
-        className="absolute bottom-[70px] right-5 z-30 flex items-center justify-center rounded-full bg-neutral-700 p-3 text-white duration-200 hover:bg-amber-700 hover:text-black sm:bottom-10 sm:right-10"
+        href="#info"
+        className="absolute bottom-20 left-1/2 z-10 flex w-[280px] -translate-x-1/2 transform items-center justify-center gap-4 rounded-full bg-neutral-700 py-2 text-white duration-200 hover:bg-amber-700 hover:text-black sm:bottom-10 sm:w-fit sm:px-3 md:px-4"
       >
-        <FaChevronDown size={30} />
+        <p className="text-sm font-semibold text-white sm:text-lg xl:text-2xl">
+          Let's talk
+        </p>
+
+        <FaChevronDown size={20} />
       </Link>
     </section>
   );
