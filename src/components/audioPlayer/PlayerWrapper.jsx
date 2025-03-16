@@ -34,7 +34,7 @@ export default function PlayerWrapper({ songs }) {
             <li key={song.title} className="mb-1">
               <button
                 onClick={() => setCurrentSongIndex(index)}
-                className={`flex w-full items-center justify-between rounded  px-3 py-4 md:text-xl ${
+                className={`flex w-full items-center justify-between rounded  px-3 py-2 md:text-sm ${
                   currentSongIndex === index
                     ? "bg-black text-white"
                     : " duration-200 hover:bg-black/70 hover:text-white"
