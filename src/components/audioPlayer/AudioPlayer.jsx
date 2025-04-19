@@ -136,37 +136,38 @@ export default function AudioPlayer({
 
       <div className="flex flex-col items-center justify-center">
         <div className="text-center sm:my-2">
-          <p className="font-semibold text-white lg:text-2xl">
+          <p className="text-lg font-semibold text-white sm:text-xl lg:text-2xl">
             {currentSong?.title ?? "Press play"}
           </p>
-          <p>{currentSong?.artist ?? ""}</p>
+          <p className="text-sm sm:text-base">{currentSong?.artist ?? ""}</p>
         </div>
       </div>
-      <div className="mt-4 grid items-center sm:grid-cols-3">
-        <span className="hidden text-xs sm:block">
+      <div className="mt-4 grid items-center gap-2 sm:grid-cols-3 sm:gap-0">
+        <span className="text-xs sm:block">
           {elapsedDisplay} / {durationDisplay}
         </span>
-        <div className="z-10 flex cursor-pointer items-center gap-4 justify-self-center">
+        <div className="z-10 flex cursor-pointer items-center gap-2 justify-self-center sm:gap-4">
           <IconButton
             onClick={handlePrev}
             disabled={songIndex === 0}
             aria-label="go to previous"
             intent="secondary"
+            size="sm"
           >
-            <MdSkipPrevious size={24} />
+            <MdSkipPrevious size={20} />
           </IconButton>
           <div className="relative z-20" onClick={togglePlayPause}>
-            <IconButton aria-label={isPlaying ? "Pause" : "Play"} size="xl">
+            <IconButton aria-label={isPlaying ? "Pause" : "Play"} size="lg">
               {!isReady && currentSong ? (
-                <CgSpinner size={24} className="animate-spin" />
+                <CgSpinner size={20} className="animate-spin" />
               ) : isPlaying ? (
-                <MdPause size={34} className="text-black" />
+                <MdPause size={24} className="text-black" />
               ) : (
-                <MdPlayArrow size={34} />
+                <MdPlayArrow size={24} />
               )}
             </IconButton>
             {!isReady && (
-              <div className="absolute left-2 top-[8px] animate-ping rounded-full bg-amber-600 p-6" />
+              <div className="absolute left-2 top-[8px] animate-ping rounded-full bg-amber-600 p-4" />
             )}
           </div>
           <IconButton
@@ -174,8 +175,9 @@ export default function AudioPlayer({
             disabled={songIndex === songCount - 1}
             aria-label="go to next"
             intent="secondary"
+            size="sm"
           >
-            <MdSkipNext size={24} />
+            <MdSkipNext size={20} />
           </IconButton>
         </div>
         <div className="hidden items-center gap-3 justify-self-end sm:flex">
