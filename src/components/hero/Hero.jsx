@@ -6,17 +6,15 @@ import PlayerWrapper from "../audioPlayer/PlayerWrapper";
 export default function Hero({ heroData, portfolioData, songs }) {
   return (
     <section
-      className="fixed top-0 z-10 flex h-screen w-screen items-center justify-center bg-black font-mona-expanded"
+      className=" flex h-screen w-screen items-center justify-center bg-black font-mona-expanded"
       id="home"
     >
-      <div className="z-10 mb-20 flex flex-col text-center ">
+      <div className="z-10 mb-20 mt-80 flex flex-col text-center sm:mt-20 ">
         <h1 className="text-3xl font-black uppercase text-white sm:text-7xl">
           {heroData[0].heroTitle}
         </h1>
-        <h1 className="text-2xl font-black uppercase text-white sm:text-5xl">
-          Music Productions
-        </h1>
-        <p className="mt-5 text-sm font-[500] uppercase text-white lg:text-xl">
+
+        <p className="mt-5 text-2xl font-black uppercase text-white sm:text-5xl">
           {heroData[0].heroSubtitle}
         </p>
 
@@ -38,7 +36,7 @@ export default function Hero({ heroData, portfolioData, songs }) {
         alt="hero"
       />
       <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black/30 from-5% to-transparent" />
-      <Link
+      {/* <Link
         href="#info"
         className="absolute bottom-20 left-1/2 z-10 flex w-[280px] -translate-x-1/2 transform items-center justify-center gap-4 rounded-full bg-neutral-700 py-2 text-white duration-200 hover:bg-amber-700 hover:text-black sm:bottom-10 sm:w-fit sm:px-3 md:px-4"
       >
@@ -47,7 +45,7 @@ export default function Hero({ heroData, portfolioData, songs }) {
         </p>
 
         <FaChevronDown size={20} />
-      </Link>
+      </Link> */}
     </section>
   );
 }

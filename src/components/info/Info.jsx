@@ -36,7 +36,7 @@ const ptComponents = {
 export default function ({ infoData }) {
   return (
     <section
-      className="sticky top-0 z-10 mt-[100vh] flex h-screen w-screen items-center justify-center bg-black"
+      className="sticky  z-20  flex h-screen w-screen items-center justify-center bg-black"
       id="portfolio"
     >
       <Image
@@ -53,10 +53,10 @@ export default function ({ infoData }) {
       <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black to-transparent sm:from-20%" />
       {/* <div className="absolute inset-0 bg-[url(https://grainy-gradients.vercel.app/noise.svg)] opacity-20 brightness-100 contrast-150" /> */}
       <div className="z-20 flex items-center justify-center">
-        <h1 className="absolute top-16 font-mona-expanded text-2xl font-black uppercase text-white sm:top-20 sm:text-5xl 2xl:text-7xl">
+        <h1 className="absolute top-10 font-mona-expanded text-2xl font-black uppercase text-white sm:top-20 sm:text-5xl 2xl:text-7xl">
           Info
         </h1>
-        <div className="mt-12 grid gap-x-12 sm:mt-16 sm:grid-cols-2">
+        <div className="mt-28 grid gap-x-12 sm:mt-16 sm:grid-cols-2">
           <div
             className={`mx-4 mt-2 flex max-w-[420px] flex-col font-mona-expanded  sm:mt-12 ${markdownStyles.markdown}`}
           >
@@ -66,7 +66,7 @@ export default function ({ infoData }) {
             />
           </div>
           <div>
-            <div className="flex justify-center">
+            <div className="flex justify-center py-16">
               <Image
                 src="/helmeri-katava-music-productions.jpg"
                 alt="Description of image"

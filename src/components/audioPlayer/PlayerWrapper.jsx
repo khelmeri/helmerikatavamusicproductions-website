@@ -29,31 +29,33 @@ export default function PlayerWrapper({ songs }) {
         />
       </div>
       <div className="container mx-auto flex-1 px-6 py-8">
-        <ul>
-          {Songs.map((song, index) => (
-            <li key={song.title} className="mb-1">
-              <button
-                onClick={() => setCurrentSongIndex(index)}
-                className={`flex w-full items-center justify-between rounded  px-3 py-2 md:text-sm ${
-                  currentSongIndex === index
-                    ? "bg-black text-white"
-                    : " duration-200 hover:bg-black/70 hover:text-white"
-                }`}
-              >
-                <h2 className="font-semibold">
-                  {song.artist} - {song.title}
-                </h2>
-                <span>
-                  {index === currentSongIndex ? (
-                    <MdPause size={20} />
-                  ) : (
-                    <MdPlayArrow size={20} />
-                  )}
-                </span>
-              </button>
-            </li>
-          ))}
-        </ul>
+        <div className="max-h-64 overflow-y-auto">
+          <ul>
+            {Songs.map((song, index) => (
+              <li key={song.title} className="mb-1">
+                <button
+                  onClick={() => setCurrentSongIndex(index)}
+                  className={`flex w-full items-center justify-between rounded px-3 py-2 md:text-sm ${
+                    currentSongIndex === index
+                      ? "bg-black text-white"
+                      : "duration-200 hover:bg-black/70 hover:text-white"
+                  }`}
+                >
+                  <h3 className="font-semibold ">
+                    {song.artist} - {song.title}
+                  </h3>
+                  <span>
+                    {index === currentSongIndex ? (
+                      <MdPause size={20} />
+                    ) : (
+                      <MdPlayArrow size={20} />
+                    )}
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <p className="mt-4 text-center text-sm text-white">
           These songs are only mixed by me, not recorded

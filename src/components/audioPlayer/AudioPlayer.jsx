@@ -135,7 +135,7 @@ export default function AudioPlayer({
       )}
 
       <div className="flex flex-col items-center justify-center">
-        <div className="my-2 text-center">
+        <div className="text-center sm:my-2">
           <p className="font-semibold text-white lg:text-2xl">
             {currentSong?.title ?? "Press play"}
           </p>

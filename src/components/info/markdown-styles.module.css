@@ -5,7 +5,7 @@
 .markdown p,
 .markdown ul,
 .markdown ol {
-  @apply my-3 text-lg text-white sm:text-2xl;
+  @apply my-1 text-sm text-white sm:my-3 sm:text-2xl;
 }
 
 .markdown blockquote {
