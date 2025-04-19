@@ -43,7 +43,7 @@ export default function Hero({ heroData, portfolioData, songs }) {
       <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black/30 from-5% to-transparent" />
       <Link
         href="#home"
-        className="fixed bottom-10 left-1 z-50 flex items-center justify-center gap-2 rounded-full bg-neutral-700/90 px-6 py-3 text-white duration-200 hover:bg-amber-700 hover:text-black sm:left-10"
+        className="fixed bottom-10 left-1 z-50 flex items-center justify-center gap-2 rounded-full bg-neutral-700/90 px-3 py-3 text-white duration-200 hover:bg-amber-700 hover:text-black sm:left-10 sm:px-6"
       >
         <FaMusic size={20} />
         <p className="text-base font-semibold text-white sm:text-lg">
@@ -70,7 +70,7 @@ export default function Hero({ heroData, portfolioData, songs }) {
       </div>
       <Link
         href="https://ig.me/m/khelmeri"
-        className="fixed bottom-10 right-1 z-50 flex items-center justify-center gap-2 rounded-full bg-neutral-700/90 px-6 py-3 text-white duration-200 hover:bg-amber-700 hover:text-black sm:right-10"
+        className="fixed bottom-10 right-1 z-50 flex items-center justify-center gap-2 rounded-full bg-neutral-700/90 px-2 py-3 text-white duration-200 hover:bg-amber-700 hover:text-black sm:right-10 sm:px-6"
       >
         <p className="text-base font-semibold text-white sm:text-lg">
           Let's talk
