@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Form from "./Form";
+import { FaInstagram, FaFacebook, FaSoundcloud } from "react-icons/fa";
+
 export default function ({ contactData }) {
   return (
     <section

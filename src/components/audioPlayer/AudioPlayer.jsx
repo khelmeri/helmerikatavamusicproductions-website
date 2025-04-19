@@ -137,7 +137,7 @@ export default function AudioPlayer({
       <div className="flex flex-col items-center justify-center">
         <div className="text-center sm:my-2">
           <p className="text-lg font-semibold text-white sm:text-xl lg:text-2xl">
-            {currentSong?.title ?? "Press play"}
+            {currentSong?.title ?? ""}
           </p>
           <p className="text-sm sm:text-base">{currentSong?.artist ?? ""}</p>
         </div>
@@ -196,9 +196,7 @@ export default function AudioPlayer({
           <VolumeInput volume={volume} onVolumeChange={handleVolumeChange} />
         </div>
       </div>
-      <span className="text-xs sm:hidden">
-        {elapsedDisplay} / {durationDisplay}
-      </span>
+
       <AudioProgressBar
         duration={duration}
         currentProgress={currrentProgress}

@@ -2,6 +2,7 @@ import Hero from "@/components/hero/Hero";
 import Portfolio from "@/components/portfolio/Portfolio";
 import Info from "@/components/info/Info";
 import Contact from "@/components/contact/Contact";
+import Services from "@/components/services/Services";
 import { loadData } from "./api/auth/siteData";
 
 export default function Home({
@@ -15,6 +16,7 @@ export default function Home({
     <div className="relative">
       <Hero heroData={heroData} portfolioData={portfolioData} songs={songs} />
       <Info infoData={infoData} />
+
       <Contact contactData={contactData} />
     </div>
   );

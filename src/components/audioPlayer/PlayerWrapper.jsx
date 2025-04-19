@@ -12,6 +12,7 @@ export default function PlayerWrapper({ songs }) {
     artist: n.songArtist,
     title: n.songTitle,
     src: n.songUrl,
+    artistUrl: n.artistUrl,
   }));
 
   const currentSong = Songs[currentSongIndex];
@@ -58,7 +59,7 @@ export default function PlayerWrapper({ songs }) {
         </div>
 
         <p className="mt-4 text-center text-sm text-white">
-          These songs are only mixed by me, not recorded
+          {currentSong?.artistUrl ?? ""}
         </p>
       </div>
     </div>
