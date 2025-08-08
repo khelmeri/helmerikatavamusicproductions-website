@@ -17,7 +17,7 @@ export default function PlayerWrapper({ songs }) {
 
   const currentSong = Songs[currentSongIndex];
   return (
-    <div className="mx-2 flex h-full flex-col rounded-xl bg-black/40 text-slate-300">
+    <div className="mx-2 flex h-full max-w-md flex-col rounded-xl bg-black/40 text-slate-300">
       <div className="mt-auto">
         <AudioPlayer
           key={currentSongIndex}
@@ -29,8 +29,8 @@ export default function PlayerWrapper({ songs }) {
           onPrev={() => setCurrentSongIndex((i) => i - 1)}
         />
       </div>
-      <div className="container mx-auto flex-1 px-6 py-8">
-        <div className="max-h-64 overflow-y-auto">
+      <div className="container mx-auto flex flex-1 flex-col px-6 py-8">
+        <div className="min-h-0 flex-1 overflow-y-auto">
           <ul>
             {Songs.map((song, index) => (
               <li key={song.title} className="mb-1">
@@ -58,9 +58,13 @@ export default function PlayerWrapper({ songs }) {
           </ul>
         </div>
 
-        <p className="mt-4 text-center text-sm text-white">
-          {currentSong?.artistUrl ?? ""}
-        </p>
+        {currentSong && (
+          <div className="mt-2 flex-shrink-0 rounded border border-white/5 bg-black/20 px-2 py-2">
+            <p className="text-start text-[8px] text-gray-400">
+              <span className="font-light">{currentSong.artistUrl}</span>
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

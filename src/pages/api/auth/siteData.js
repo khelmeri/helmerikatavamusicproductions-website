@@ -25,6 +25,7 @@ export async function loadData() {
     "songs":*[_type == "song"] {
       songArtist,
       songTitle,
+      artistUrl,
       "songUrl": portfolioSong.asset->url
     },
   }`;
