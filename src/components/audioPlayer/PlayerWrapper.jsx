@@ -36,16 +36,16 @@ export default function PlayerWrapper({ songs }) {
               <li key={song.title} className="mb-1">
                 <button
                   onClick={() => setCurrentSongIndex(index)}
-                  className={`flex w-full items-center justify-between rounded px-3 py-2 md:text-sm ${
+                  className={`flex w-full items-center justify-between rounded px-3 py-2 text-sm md:text-sm ${
                     currentSongIndex === index
                       ? "bg-black text-white"
                       : "duration-200 hover:bg-black/70 hover:text-white"
                   }`}
                 >
-                  <h3 className="font-semibold ">
+                  <h3 className="text-left text-sm font-semibold">
                     {song.artist} - {song.title}
                   </h3>
-                  <span>
+                  <span className="flex-shrink-0">
                     {index === currentSongIndex ? (
                       <MdPause size={20} />
                     ) : (

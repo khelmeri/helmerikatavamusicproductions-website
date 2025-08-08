@@ -11,10 +11,10 @@ import PlayerWrapper from "../audioPlayer/PlayerWrapper";
 export default function Hero({ heroData, portfolioData, songs }) {
   return (
     <section
-      className="relative flex h-screen w-screen items-center justify-center bg-black font-mona-expanded"
+      className="relative flex min-h-screen w-screen items-center justify-center bg-black font-mona-expanded"
       id="home"
     >
-      <div className="z-10 mb-20  flex flex-col text-center sm:mt-20">
+      <div className="z-10 flex flex-col items-center justify-center px-4 py-8 text-center">
         <h1 className="text-2xl font-black uppercase text-white sm:text-7xl">
           {heroData[0].heroTitle}
         </h1>
@@ -24,10 +24,8 @@ export default function Hero({ heroData, portfolioData, songs }) {
         </p>
 
         {/* <div className="absolute inset-0 bg-[url(https://grainy-gradients.vercel.app/noise.svg)] opacity-20 brightness-100 contrast-150" /> */}
-        <div className="z-10 flex items-center justify-center">
-          <div className="mt-8 flex flex-col items-center justify-center sm:mt-16">
-            <PlayerWrapper songs={songs} />
-          </div>
+        <div className="z-10 mt-8 flex items-center justify-center sm:mt-16">
+          <PlayerWrapper songs={songs} />
         </div>
       </div>
       <Image
