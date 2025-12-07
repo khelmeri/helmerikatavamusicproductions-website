@@ -15,7 +15,7 @@ export default function ({ contactData }) {
         style={{
           objectFit: "cover",
         }}
-        className="z-0 brightness0 grayscale(0.7)"
+        className="z-0 brightness0 grayscale(70%)"
         alt="hero"
       />
 
