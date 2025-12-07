@@ -16,7 +16,7 @@ export default function ({ portfolioData, songs }) {
         style={{
           objectFit: "cover",
         }}
-        className="z-0 brightness0 grayscale"
+        className="z-0 grayscale"
         alt="hero"
       />
       <div className="absolute top-0 z-0 h-screen w-screen bg-gradient-to-b from-black/80 from-10% to-transparent" />
