@@ -68,11 +68,11 @@ export default function ({ infoData }) {
           <div>
             <div className="flex justify-center py-8 sm:py-16">
               <Image
-                src="/helmeri-katava-music-productions.jpg"
+                src="/profiilikuva.jpeg"
                 alt="Description of image"
                 width={300}
                 height={300}
-                className="pointer-events-none w-3/4 rounded-lg shadow-md brightness-50 grayscale sm:w-5/6"
+                className="pointer-events-none w-3/4 rounded-lg shadow-md brightness-50 sm:w-5/6"
               />
             </div>
           </div>
