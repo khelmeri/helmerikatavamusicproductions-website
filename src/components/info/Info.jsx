@@ -44,9 +44,9 @@ export default function ({ infoData }) {
         sizes=""
         fill
         style={{
-          objectFit: "cover",filter: brightness(50%);
+          objectFit: "cover",
         }}
-        className="z-0 grayscale"
+        className="z-0 brightness-90 grayscale"
         alt="hero"
       />
 
