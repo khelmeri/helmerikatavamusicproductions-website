@@ -72,7 +72,7 @@ export default function ({ infoData }) {
                 alt="Description of image"
                 width={300}
                 height={300}
-                className="pointer-events-none w-3/4 rounded-xl shadow-md sm:w-5/6"
+                className="pointer-events-none w-3/4 rounded-full shadow-md sm:w-5/6"
               />
             </div>
           </div>
