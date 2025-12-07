@@ -46,7 +46,7 @@ export default function ({ infoData }) {
         style={{
           objectFit: "cover",
         }}
-        className="z-0 grayscale"
+        className="z-0 grayscale brightness-50"
         alt="hero"
       />
 
